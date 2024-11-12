@@ -1,0 +1,261 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Resume Builder</title>
+    <link rel="shortcut icon" href="/img/32x32-removebg-preview.png" type="image/x-icon">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <div class="container">
+     
+
+      <div class="header">
+        <h1>Resume Builder📝</h1>
+      </div>
+      <div class="form-section">
+        <h2
+          style="
+            color: #fff6a9;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+              sans-serif;
+            font-size: 50px;
+          "
+        >
+          Personal Information
+        </h2>
+        <div class="form-group">
+          <label for="full-name">Full Name :</label>
+          <input
+            id="full-name"
+            placeholder="Enter your full name"
+            type="text"
+          />
+        </div>
+        <div class="form-group">
+          <label for="contact-details">Contact Details :</label>
+          <input
+            id="contact-details"
+            placeholder="Enter your phone and email"
+            type="text"
+          />
+        </div>
+        <div class="form-group">
+          <label for="address">Address :</label>
+          <input id="address" placeholder="Enter your address" type="text" />
+        </div>
+        <div class="form-group">
+          <span style="color:#FAC30E;" for="profile-photo">Upload Photo</span>
+          <input accept="image/*" id="profile-photo" type="file" />
+          <img
+            alt="Profile photo preview"
+            class="preview-img"
+            height="100"
+            id="profile-photo-preview"
+            src="https://storage.googleapis.com/a1aa/image/eYtNMWfxJ0iQzkXkR5UNfc7uQuOhrmUJtuQULqefrV7o2NCeE.jpg"
+            width="100"
+          />
+        </div>
+      </div>
+      <div class="form-section">
+        <h2
+          style="
+            color: #fff6a9;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+              sans-serif;
+            font-size: 50px;
+          "
+        >
+          Professional Information
+        </h2>
+        <div class="form-group">
+          <label for="work-experience">Work Experience :</label>
+          <textarea
+            id="work-experience"
+            placeholder="Enter your work experience"
+            rows="4"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="education">Education :</label>
+          <textarea
+            id="education"
+            placeholder="Enter your education details"
+            rows="4"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="skills">Skills :</label>
+          <textarea
+            id="skills"
+            placeholder="Enter your skills"
+            rows="4"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="certifications">Certifications :</label>
+          <textarea
+            id="certifications"
+            placeholder="Enter your certifications"
+            rows="4"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="hobbies">Hobbies :</label>
+          <textarea
+            id="hobbies"
+            placeholder="Enter your hobbies"
+            rows="4"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="references">References :</label>
+          <textarea
+            id="references"
+            placeholder="Enter your references"
+            rows="4"
+          ></textarea>
+        </div>
+      </div>
+      <div class="form-section">
+        <h2
+          style="
+            color: #fff6a9;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+              sans-serif;
+            font-size: 40px;
+          "
+        >
+          Customization Options
+        </h2>
+        <div class="form-group">
+          <span
+          style="
+            color: #fff6a9;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+              'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 25px;
+          "
+          >Templates</span
+        >          <div class="template-picker">
+            <div
+              class="selected"
+              data-template="template1"
+              style="background-image: url('https://placehold.co/100x150')"
+            ></div>
+            <div
+              data-template="template2"
+              style="background-image: url('https://placehold.co/100x150')"
+            ></div>
+            <div
+              data-template="template3"
+              style="background-image: url('https://placehold.co/100x150')"
+            ></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <span
+            style="
+              color: #fff6a9;
+              font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              font-size: 25px;
+            "
+            >Color Themes :</span
+          >
+          <div class="color-picker">
+            <div class="selected" style="background-color: #76c7c0; height: 50px; width: 50px;"></div>
+            <div style="background-color: #ff6f61; height: 50px; width: 50px;"></div>
+            <div style="background-color: #4a90e2; height: 50px; width: 50px;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="preview-section">
+        <h2 style="
+        color: #fff6a9;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+        font-size: 45px;
+      ">Live Preview</h2>
+        <div class="resume-preview" id="resume-preview">
+          <img
+            alt="Profile photo preview"
+            class="profile-photo-preview"
+            id="preview-profile-photo"
+            src="https://storage.googleapis.com/a1aa/image/eYtNMWfxJ0iQzkXkR5UNfc7uQuOhrmUJtuQULqefrV7o2NCeE.jpg"
+          />
+          <h2 id="preview-full-name">John Doe</h2>
+          <div class="section">
+            <h3><i class="fas fa-phone-alt"></i> Contact Details</h3>
+            <p id="preview-contact-details">
+              Phone: 123-456-7890 | Email: john.doe@example.com
+            </p>
+          </div>
+          <div class="section">
+            <h3><i class="fas fa-map-marker-alt"></i> Address</h3>
+            <p id="preview-address">123 Main St, Anytown, USA</p>
+          </div>
+          <div class="section">
+            <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
+            <p id="preview-work-experience">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+          <div class="section">
+            <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+            <p id="preview-education">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+          <div class="section">
+            <h3><i class="fas fa-tools"></i> Skills</h3>
+            <p id="preview-skills">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+          <div class="section">
+            <h3><i class="fas fa-certificate"></i> Certifications</h3>
+            <p id="preview-certifications">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+          <div class="section">
+            <h3><i class="fas fa-heart"></i> Hobbies</h3>
+            <p id="preview-hobbies">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+          <div class="section">
+            <h3><i class="fas fa-user-friends"></i> References</h3>
+            <p id="preview-references">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+        <button class="btn download-btn">Download as PDF</button>
+      </div>
+      <footer class="bg- p-4 mt-8">
+        <div class="container mx-auto text-center">
+        
+        <p style="color: aliceblue;">&copy; 2024 Resume Builder | Design by <a class=" text-yellow-100 hover:text-gray-400" href="https://www.linkedin.com/in/developer-hasnain/" target="_blank" >Muhammad Hasnain</a> | All rights Reserved.</p>
+      <p class="text-yellow-100">New Updates are comming Soon </p> <a href="https://www.linkedin.com/in/developer-hasnain/" target="_blank"> 
+        <img src="/img/32x32-removebg-preview.png" alt="Logo" class="logo"  >
+       </a> 
+      </div>
+       </footer>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
