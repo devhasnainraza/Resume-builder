@@ -3,7 +3,11 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Resume Builder</title>
-    <link rel="shortcut icon" href="/img/32x32-removebg-preview.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="/img/32x32-removebg-preview.png"
+      type="image/x-icon"
+    />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       rel="stylesheet"
@@ -18,10 +22,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
     <div class="container">
-     
-
       <div class="header">
         <h1>Resume Builder📝</h1>
       </div>
@@ -57,15 +58,13 @@
           <input id="address" placeholder="Enter your address" type="text" />
         </div>
         <div class="form-group">
-          <span style="color:#FAC30E;" for="profile-photo">Upload Photo</span>
+          <span style="color: #fff6a9" for="profile-photo">Upload Photo</span>
           <input accept="image/*" id="profile-photo" type="file" />
           <img
             alt="Profile photo preview"
             class="preview-img"
-            height="100"
             id="profile-photo-preview"
             src="https://storage.googleapis.com/a1aa/image/eYtNMWfxJ0iQzkXkR5UNfc7uQuOhrmUJtuQULqefrV7o2NCeE.jpg"
-            width="100"
           />
         </div>
       </div>
@@ -142,14 +141,15 @@
         </h2>
         <div class="form-group">
           <span
-          style="
-            color: #fff6a9;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
-              'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            font-size: 25px;
-          "
-          >Templates</span
-        >          <div class="template-picker">
+            style="
+              color: #fff6a9;
+              font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              font-size: 25px;
+            "
+            >Templates</span
+          >
+          <div class="template-picker">
             <div
               class="selected"
               data-template="template1"
@@ -176,19 +176,30 @@
             >Color Themes :</span
           >
           <div class="color-picker">
-            <div class="selected" style="background-color: #76c7c0; height: 50px; width: 50px;"></div>
-            <div style="background-color: #ff6f61; height: 50px; width: 50px;"></div>
-            <div style="background-color: #4a90e2; height: 50px; width: 50px;"></div>
+            <div
+              class="selected"
+              style="background-color: #76c7c0; height: 50px; width: 50px"
+            ></div>
+            <div
+              style="background-color: #ff6f61; height: 50px; width: 50px"
+            ></div>
+            <div
+              style="background-color: #4a90e2; height: 50px; width: 50px"
+            ></div>
           </div>
         </div>
       </div>
       <div class="preview-section">
-        <h2 style="
-        color: #fff6a9;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
-          sans-serif;
-        font-size: 45px;
-      ">Live Preview</h2>
+        <h2
+          style="
+            color: #fff6a9;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+              sans-serif;
+            font-size: 45px;
+          "
+        >
+          Live Preview
+        </h2>
         <div class="resume-preview" id="resume-preview">
           <img
             alt="Profile photo preview"
@@ -246,15 +257,17 @@
         </div>
         <button class="btn download-btn">Download as PDF</button>
       </div>
-      <footer class="bg- p-4 mt-8">
-        <div class="container mx-auto text-center">
-        
-        <p style="color: aliceblue;">&copy; 2024 Resume Builder | Design by <a class=" text-yellow-100 hover:text-gray-400" href="https://www.linkedin.com/in/developer-hasnain/" target="_blank" >Muhammad Hasnain</a> | All rights Reserved.</p>
-      <p class="text-yellow-100">New Updates are comming Soon </p> <a href="https://www.linkedin.com/in/developer-hasnain/" target="_blank"> 
-        <img src="/img/32x32-removebg-preview.png" alt="Logo" class="logo"  >
-       </a> 
-      </div>
-       </footer>
+      <footer class="footer">
+        <p>
+          &copy; 2024 Resume Builder | Design by
+          <a
+            href="https://www.linkedin.com/in/developer-hasnain/"
+            target="_blank"
+            >Muhammad Hasnain</a
+          >
+          | All rights reserved.
+        </p>
+      </footer>
     </div>
     <script src="app.js"></script>
   </body>
